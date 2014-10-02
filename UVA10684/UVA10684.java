@@ -1,7 +1,7 @@
 import java.util.*;
 /*
- *  UVa 10684 - The jackpot
- *  Algorithm - Max 1D Range Sum
+ * UVa 10684 - The jackpot
+ * Algorithm - Max 1D Range Sum
  */
 
 class UVA10684 {
