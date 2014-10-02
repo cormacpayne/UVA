@@ -19,7 +19,7 @@ class UVA10496 {
 		int min = 2000000000;
 
 		for (int i = 0; i <= n; i++) {
-         // if we haven't already visited i, visit it and add the distance from index to i
+                        // if we haven't already visited i, visit it and add the distance from index to i
 			if (i != index && (bitmask & (1 << i)) == 0) min = Math.min(min, dist[index][i] + solve(i, bitmask | (1 << i)));
 		}
 
