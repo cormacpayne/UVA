@@ -13,12 +13,13 @@ class UVA10496 {
 	public static int[][] dist, memo;
 
 	public static int solve(int index, int bitmask) {
-		if (bitmask == (1 << (n + 1)) - 1) return dist[index][0];
+		if (bitmask == (1 << (n + 1)) - 1) return dist[index][0]; // if bitmask = 1...1, then we've visited everything
 		if (memo[index][bitmask] != -1) return memo[index][bitmask];
 
 		int min = 2000000000;
 
 		for (int i = 0; i <= n; i++) {
+         // if we haven't already visited i, visit it and add the distance from index to i
 			if (i != index && (bitmask & (1 << i)) == 0) min = Math.min(min, dist[index][i] + solve(i, bitmask | (1 << i)));
 		}
 
